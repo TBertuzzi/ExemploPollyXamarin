@@ -1,10 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+
 namespace ExemploPollyXamarin.Services
 {
-    public class IPokemonService
+    public interface IPokemonService
     {
-        public IPokemonService()
-        {
-        }
+        Task<List<Pokemon>> GetPokemonsAsync();
     }
 }

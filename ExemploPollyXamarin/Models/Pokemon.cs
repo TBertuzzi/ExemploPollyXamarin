@@ -19,8 +19,6 @@ namespace ExemploPollyXamarin
 
         public byte[] Image { get; set; }
 
-        [Ignored]
-        public ImageSource ImageSrc { get; set; }
     }
 
     public class Sprites

@@ -4,18 +4,19 @@ using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Net.Http;
 using System.Threading.Tasks;
+using ExemploPollyXamarin.Services;
 
 namespace ExemploPollyXamarin.ViewModels
 {
     public class MainViewModel : BaseViewModel
     {
         public ObservableCollection<Pokemon> Pokemons { get; }
-        private PokemonService _pokemonService;
+        private IPokemonService _pokemonService;
 
         public MainViewModel()
         {
             Pokemons = new ObservableCollection<Pokemon>();
-            _pokemonService = new PokemonService();
+            _pokemonService = new PokemonService(); // Aqui deveria ter uma Injeção de Dependencia
 
             LoadAsync();
         }
